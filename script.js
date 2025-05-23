@@ -23,9 +23,20 @@ function generateGrid(dimension)
         cell.className = "cell";
         cell.style.width = `${gridWidth / dimension - cell.style.borderWidth}px`;
         cell.addEventListener("mouseenter", function (e) {
-            e.target.classList.add("filled");
+            if(!e.target.classList.contains("filled"))
+            {
+                e.target.style.backgroundColor = getRandomColorRgb();
+                e.target.classList.add("filled");
+            }
         });
     
         gridContainer.appendChild(cell);
     }
 }
+
+function getRandomColorRgb() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
