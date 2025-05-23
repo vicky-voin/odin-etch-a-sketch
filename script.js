@@ -21,7 +21,7 @@ function generateGrid(dimension)
         const cell = document.createElement("div");
 
         cell.className = "cell";
-        cell.style.width = `${gridWidth / dimension - cell.style.borderWidth}px`;
+        cell.style.width = `${gridWidth / dimension - 4}px`;
         cell.addEventListener("mouseenter", function (e) {
             if(!e.target.classList.contains("filled"))
             {
