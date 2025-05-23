@@ -27,3 +27,8 @@
     aspect-ratio: 1;
     margin: -1px;
 }
+
+.filled
+{
+    background-color: darkgray;
+}
